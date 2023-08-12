@@ -1,0 +1,23 @@
+html {
+  height: 100%;
+  }
+
+body {
+  background: rgb(255,62,0);
+  background: linear-gradient(170deg, rgba(255,62,0,1) 0%, rgba(191,136,121,1) 21%, rgba(219,120,255,1) 100%);
+  margin-top: 50px;
+  margin-left: 100px;
+  min-height: 100%;
+  }
+ 
+h1 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 2.5em;
+  color: FireBrick;
+  }
+ 
+p {
+  font-family: Georgia, serif;
+  font-size: 1.2em;
+  color: DarkSlateGray;
+  }
