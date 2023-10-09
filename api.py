@@ -12,7 +12,7 @@ import re
 from bs4 import BeautifulSoup
 import torch
 from transformers import BertModel, BertTokenizer
-import pandas as pd
+# import pandas as pd
 
 def get_indexes (boolean_tensor) :
     indexes = []
@@ -100,7 +100,7 @@ tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
     
     
 app = Flask(__name__, template_folder='templates', static_folder='statics')
-app.debug = True
+# app.debug = True
  
 @app.route('/')
 def form():
@@ -112,7 +112,7 @@ def data():
         return f"The URL /data is accessed directly. Try going to '/form' to submit form"
     if request.method == 'POST':
         post_text = request.form.get("multiliner")
-        print(os.listdir())
+        # print(os.listdir())
         body = post_text
         model_input = re.sub(r'\d', '', re.sub('\W+',' ', BeautifulSoup(body, 'html.parser').get_text())).replace('   ', ' ').replace('  ', ' ')
         max_len = 256
